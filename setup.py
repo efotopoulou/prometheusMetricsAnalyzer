@@ -1,13 +1,13 @@
 from setuptools import setup
 
-setup(name='panalyzer',
+setup(name='prometheus_metrics_analyzer',
       version='0.1',
       description='A simple library for supporting simple analytic services upon metrics hosted at Prometheus monitoring system and time series database.',
-      url='https://github.com/efotopoulou/prometheus-metrics-analyzer',
+      url='https://github.com/efotopoulou/prometheus_metrics_analyzer',
       author='Eleni Fotopoulou',
       author_email='fwtopoulou@gmail.com',
       license='MIT',
-      packages=['panalyzer'],
+      packages=['prometheus_metrics_analyzer'],
       install_requires=[
       'fuzzywuzzy',
       'pandas',
