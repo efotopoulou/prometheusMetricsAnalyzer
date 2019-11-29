@@ -11,9 +11,9 @@ setup(name='prometheus_metrics_analyzer',
       install_requires=[
       'fuzzywuzzy',
       'pandas',
-      'requests',
-      'seaborn',
-      'sklearn'
+      'requests'
+      #'seaborn',
+      #'sklearn'
       ],
       test_suite='nose.collector',
       tests_require=['nose'],
