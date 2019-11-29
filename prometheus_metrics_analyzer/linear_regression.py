@@ -1,42 +1,42 @@
 import os
 import pandas as pd
-import prometheus_connection
+#import prometheus_connection
 import numpy as np
 #import seaborn as sns
 #import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
+#from sklearn.linear_model import LinearRegression
 
 
 def ln(prometheus_url,periods,metrics,step):
     
 #    print(metrics[1])
 #   
-    for period in periods:
+#    for period in periods:
         #print (period['start'])
         #print (period['end'])
-        y_data = prometheus_connection.get_prometheus_timeserie(prometheus_url,metrics[0],period['start'],period['end'],step)
-        print("y_data")
-        print(y_data)
+#        y_data = prometheus_connection.get_prometheus_timeserie(prometheus_url,metrics[0],period['start'],period['end'],step)
+#        print("y_data")
+#        print(y_data)
         
-    for period in periods:
-        print (period['start'])
-        print (period['end'])
-        x_data = prometheus_connection.get_prometheus_timeserie(prometheus_url,metrics[1],period['start'],period['end'],step)
-        print("x_data")
-        print(x_data)
+#    for period in periods:
+#        print (period['start'])
+#        print (period['end'])
+#        x_data = prometheus_connection.get_prometheus_timeserie(prometheus_url,metrics[1],period['start'],period['end'],step)
+#        print("x_data")
+#        print(x_data)
     
-    y_dataframe = pd.DataFrame(y_data['data']['result'][0]['values']).astype(float)
-    y_dataframe.columns = ["timestamp", metrics[0]]
-    x_dataframe = pd.DataFrame(x_data['data']['result'][0]['values']).astype(float) 
-    x_dataframe.columns = ["timestamp", metrics[1]]
+#    y_dataframe = pd.DataFrame(y_data['data']['result'][0]['values']).astype(float)
+#    y_dataframe.columns = ["timestamp", metrics[0]]
+#    x_dataframe = pd.DataFrame(x_data['data']['result'][0]['values']).astype(float) 
+#    x_dataframe.columns = ["timestamp", metrics[1]]
     
     #print(y_dataframe)
     #print(x_dataframe)
                                
-    dataframe = pd.merge(y_dataframe, x_dataframe)
-    print(dataframe)
+#    dataframe = pd.merge(y_dataframe, x_dataframe)
+#    print(dataframe)
     
-    model = LinearRegression()
+#    model = LinearRegression()
     
     #sns.set(color_codes=True)
     ##sns.regplot(x=metrics[1], y=metrics[0], data=dataframe);
@@ -64,4 +64,4 @@ def ln(prometheus_url,periods,metrics,step):
     #f.write(message)
     #f.close()
     #return '/static/results/linear_regression_test.html'
-    return ''
+    return 'hello!'
