@@ -1,8 +1,8 @@
 from unittest import TestCase
-from prometheus_metrics_analyzer import utilities
+from prometheusMetricsAnalyzer import utilities
 import pandas as pd
 
-use_data = pd.read_csv('prometheus_metrics_analyzer/data/iris.csv')
+use_data = pd.read_csv('prometheusMetricsAnalyzer/data/iris.csv')
 
 def test_encode_and_bind():
     s = utilities.encode_and_bind(use_data, 'sepal_length')

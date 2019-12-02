@@ -1,1 +1,1 @@
-include prometheus_metrics_analyzer/data/iris.csv
+include prometheusMetricsAnalyzer/data/iris.csv
