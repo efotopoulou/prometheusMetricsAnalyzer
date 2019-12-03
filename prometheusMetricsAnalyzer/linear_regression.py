@@ -2,6 +2,7 @@ import os
 import pandas as pd
 #import prometheus_connection
 import numpy as np
+import matplotlib.pyplot as plt
 #import seaborn as sns
 #import matplotlib.pyplot as plt
 #from sklearn.linear_model import LinearRegression
@@ -67,7 +68,14 @@ def ln(prometheus_url,periods,metrics,step):
 
     message = """<html>
     <head></head>
-    <body><p>Hello World!</p></body>
+    <body><p>Hello World!</p>
+    <img src="plot.png" alt="Smiley face" height="42" width="42"></body>
     </html>"""
+
+    plt.plot([0, 1, 2, 3, 4], [0, 3, 5, 9, 11])
+    plt.xlabel('Months')
+    plt.ylabel('Books Read')
+    plt.show()
+    plt.savefig('plot.png', dpi=300, bbox_inches='tight')
 
     return message

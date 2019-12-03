@@ -11,7 +11,8 @@ setup(name='prometheusMetricsAnalyzer',
       install_requires=[
       'fuzzywuzzy',
       'pandas',
-      'requests'
+      'requests',
+      'matplotlib'
       #'seaborn',
       #'sklearn'
       ],
