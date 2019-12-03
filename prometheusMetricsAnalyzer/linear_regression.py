@@ -75,7 +75,7 @@ def ln(prometheus_url,periods,metrics,step):
     plt.plot([0, 1, 2, 3, 4], [0, 3, 5, 9, 11])
     plt.xlabel('Months')
     plt.ylabel('Books Read')
-    plt.show()
+    #plt.show()
     plt.savefig('plot.png', dpi=300, bbox_inches='tight')
 
     return message
