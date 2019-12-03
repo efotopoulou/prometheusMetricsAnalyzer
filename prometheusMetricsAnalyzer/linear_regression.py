@@ -64,4 +64,10 @@ def ln(prometheus_url,periods,metrics,step):
     #f.write(message)
     #f.close()
     #return '/static/results/linear_regression_test.html'
-    return 'hello8888!'
+
+    message = """<html>
+    <head></head>
+    <body><p>Hello World!</p></body>
+    </html>"""
+
+    return message
