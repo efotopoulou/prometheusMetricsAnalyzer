@@ -69,7 +69,7 @@ def ln(prometheus_url,periods,metrics,step):
     message = """<html>
     <head></head>
     <body><p>Hello World!</p>
-    <img src="/static/plot.png" alt="Smiley face" height="42" width="42"></body>
+    <img src="/static/plot.png"></body>
     </html>"""
 
     plt.plot([0, 1, 2, 3, 4], [0, 3, 5, 9, 11])
