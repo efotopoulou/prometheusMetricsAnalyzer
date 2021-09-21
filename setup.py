@@ -12,7 +12,8 @@ setup(name='prometheusMetricsAnalyzer',
       'fuzzywuzzy',
       'pandas',
       'requests',
-      'matplotlib'
+      'matplotlib',
+      'scikit-learn',
       #'seaborn',
       #'sklearn'
       ],
