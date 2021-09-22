@@ -18,8 +18,9 @@ def ln(prometheus_url,periods,metrics,step):
 def kmeans(prometheus_url,periods,metrics,step):
 
     print('geia sou')
+    endpoint = prometheus_url + '/api/v1/query_range'
     for metric in metrics:
-        response =requests.get(prometheus_url + '/api/v1/query_range', params={'query': metric,'start':'2021-09-19T07:00:00.781Z','end':'2021-09-19T13:00:00.781Z','step':'3m'})
+        response =requests.get(endpoint, params={'query': metric,'start':'2021-09-19T07:00:00.781Z','end':'2021-09-19T13:00:00.781Z','step':'3m'})
     #response.content
     X = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])
     kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
