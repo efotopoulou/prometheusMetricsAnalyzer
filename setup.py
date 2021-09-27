@@ -14,6 +14,7 @@ setup(name='prometheusMetricsAnalyzer',
       'requests',
       'matplotlib',
       'scikit-learn',
+      'numpy',
       #'seaborn',
       #'sklearn'
       ],
