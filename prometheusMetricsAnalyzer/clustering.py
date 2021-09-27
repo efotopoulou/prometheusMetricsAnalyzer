@@ -15,6 +15,7 @@ def kmeans(prometheus_url,periods,metrics,step):
     dataset = np.empty((0))
     for metric in metrics:
         response =requests.get(endpoint, params={'query': metric,'start':periods['start'],'end':periods['end'],'step':step})
+        print(response.content)
         y = json.loads(response.content)
         values = y["data"]["result"][0]["values"]
         np_values = np.array(values)
