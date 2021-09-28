@@ -15,7 +15,7 @@ def kmeans(prometheus_url,periods,metrics,step):
     dataset = np.empty((0))
     for metric in metrics:
         response =requests.get(endpoint, params={'query': metric,'start':periods['start'],'end':periods['end'],'step':step})
-        print(response.content)
+        #print(response.content)
         y = json.loads(response.content)
         values = y["data"]["result"][0]["values"]
         np_values = np.array(values)
@@ -25,7 +25,7 @@ def kmeans(prometheus_url,periods,metrics,step):
         else:
             dataset = np.hstack((dataset, np_values))
 
-        print(dataset)
+        #print(dataset)
 
     #X = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])
     kmeans = KMeans(n_clusters=2, random_state=0).fit(dataset)
