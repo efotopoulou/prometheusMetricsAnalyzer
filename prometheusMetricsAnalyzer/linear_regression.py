@@ -22,14 +22,16 @@ def ln(prometheus_url,periods,metrics,step):
         else:
             dataset = np.hstack((dataset, np_values))
 
-        #print(dataset)
-
-    x = np.array([5, 15, 25, 35, 45, 55]).reshape((-1, 1))
-    y = np.array([5, 20, 14, 32, 22, 38])
+    #print(dataset)
+    dataset = dataset.astype(float)
+    x = dataset[:,1].reshape((-1, 1))
+    y = dataset[:,0]
+    #x = np.array([5, 15, 25, 35, 45, 55]).reshape((-1, 1))
+    #y = np.array([5, 20, 14, 32, 22, 38])
     model = LinearRegression().fit(x, y)
     plt.scatter(x, y,color='g')
     plt.plot(x, model.predict(x),color='k')
-
+    #plt.show()
 
     message = """<html>
     <head></head>
